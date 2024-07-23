@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega e Endereço</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./entrega.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><!-- Imagem do logotipo -->
+            <img src="/img/logo-branca.png" width="150px" usemap="#image-map">
+
+            <map name="image-map"><!-- Mapeamento da imagem -->
+                <area target="_self" alt="Logo do site, uma coroa preta e branca escrito Urban Mania" title="Logo" href="/index.html" coords="250,240,267" shape="circle">
+            </map>
+        </div>
+        <ul class="menu"><!-- Menu de navegação -->
+            <div class ="options"><!-- Opções do menu -->
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/produtos.html">Produtos</a></li>
+                <li><a href="/sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="/contatos.html">Contatos</a></li>
+            </div>
+        </ul>
+    </div><!-- Fim da seção do cabeçalho -->
+
+    <!-- Formulário de informações de entrega -->
+    <div class="formulario">
+        <form id="form-compra" action="/index.html">
+            <label for="full-name">Nome Completo:</label><br>
+            <input type="text" id="full-name" name="full-name" required><br>
+
+            <!-- Layout em duas colunas para endereço -->
+            <div class="row">
+                <div class="col">
+                    <label for="estado">Estado:</label><br>
+                    <input type="text" id="estado" name="estado" required><br>
+                </div>
+                <div class="col">
+                    <label for="cidade">Cidade:</label><br>
+                    <input type="text" id="cidade" name="cidade" required><br>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col">
+                    <label for="rua">Rua:</label><br>
+                    <input type="text" id="rua" name="rua" required><br>
+                </div>
+                <div class="col">
+                    <label for="numero">Número:</label><br>
+                    <input type="number" id="numero" name="numero" required><br>
+                </div>
+            </div>
+            
+            <label for="complemento">Complemento:</label><br>
+            <input type="text" id="complemento" name="complemento"><br>
+            
+            <label for="cep">CEP:</label><br>
+            <input type="text" id="cep" name="cep" required><br>
+            
+            <label for="telefone">Telefone:</label><br>
+            <input type="tel" id="telefone" name="telefone" required><br>
+            
+            <!-- Botão de envio do formulário -->
+            <button type="submit" id="btn-finalizar">Finalizar Compra</button>
+        </form>
+    </div>
+    
+    
+    <footer>
+        <div id="footer_content"> <!-- Conteúdo do rodapé -->
+            <div id="footer_contacts"><!-- Informações de contato -->
+                <img src="/img/logo-branca.png" width="125px" usemap="#image-map"><!-- Imagem do logotipo -->
+                <map name="image-map"><!-- Mapeamento da imagem -->
+                    <area target="_self" alt="Logo do site, uma coroa preta e branca escrito Urban Mania" title="Logo" href="/index.html" coords="250,240,267" shape="circle">
+                </map>
+                <div id="footer_social_media"><!-- Links para redes sociais no rodapé -->
+                    <a href="#"class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i> <!-- Ícone do Instagram -->
+                    </a>
+                    <a href="#"class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook"></i><!-- Ícone do Facebook -->
+                    </a>
+                    <a href="#"class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i><!-- Ícone do WhatsApp -->
+                    </a>
+                </div>
+            </div>
+        
+            <ul class="footer-list"><!-- Lista no rodapé -->
+                <li>
+                    <H3>Conheça a Urban</H3>
+                </li>
+                <li>
+                    <a href="/sobre-nos.html" class="footer-link">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="/contatos.html" class="footer-link">Contato</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list"><!-- Outra lista no rodapé -->
+                <li>
+                    <H3>Produtos</H3>
+                </li>
+                <li>
+                    <a href="/produtos.html" class="footer-link">Coleção</a>
+                </li>
+            </ul>
+            <div id ="footer-promotion">
+                <h3>Novidades</h3>
+                <p>Cadastre seu email para ser notificado de nossas futuras promoções</p>
+                <div id="input_group">
+                    <input type="email" id="email"><!-- Campo para inserção de email -->
+                    <button><i class="fa-regular fa-envelope"></i></button><!-- Botão para enviar o email -->
+                </div>
+            </div>
+        </div>
+        <div id="footer-copyright"><!-- Direitos autorais no rodapé -->
+            &#169<!-- Símbolo de copyright -->
+            2024 Urban Mania, Todos os direitos reservados.
+        </div>
+    </footer>
+</body>
+</html>

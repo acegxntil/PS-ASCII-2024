@@ -1,0 +1,116 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moletom Estampado</title>
+    <link rel="stylesheet" href="/venda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><!-- Imagem do logotipo -->
+            <img src="/img/logo-branca.png" width="150px" usemap="#image-map">
+
+            <map name="image-map"><!-- Mapeamento da imagem -->
+                <area target="_self" alt="Logo do site, uma coroa preta e branca escrito Urban Mania" title="Logo" href="/index.html" coords="250,240,267" shape="circle">
+            </map>
+        </div>
+        <ul class="menu"><!-- Menu de navegação -->
+            <div class ="options"><!-- Opções do menu -->
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/produtos.html">Produtos</a></li>
+                <li><a href="/sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="/contatos.html">Contatos</a></li>
+            </div>
+        </ul>
+    </div><!-- Fim da seção do cabeçalho -->
+
+    <div class="product-container"><!-- Container do produto -->
+        <div class="product-image"> <!-- Imagem do produto -->
+            <img src="/img/moletom-preto.jpg" alt="Moletom Preto" id="product-image">
+        </div>
+        <div class="product-details"><!-- Detalhes do produto -->
+            <div class="product-title">Moletom Estampado</div>
+            <div class="product-price">R$ 99,99</div>
+            <div class="product-description">
+                <p>Moletom estampado, feito de algodão. </p>
+            </div>
+            <form id="order-form" action="/entrega.html" method="GET"><!-- Formulário para ação de compra -->
+                <div class="size-buttons"><!-- Botões de seleção de tamanho -->
+                    <strong>Tamanho:</strong>
+                    <label><input type="radio" name="size" value="P"> P</label>
+                    <label><input type="radio" name="size" value="M"> M</label>
+                    <label><input type="radio" name="size" value="G"> G</label>
+                    <label><input type="radio" name="size" value="GG"> GG</label>
+                </div>
+                <div class="color-buttons"><!-- Botões de seleção de cor -->
+                    <strong>Cor:</strong>
+                    <label><input type="radio" name="color" value="moletom-preto.jpg"> Preto</label>
+                    <label><input type="radio" name="color" value="moletom-azul.jpg"> Azul</label>
+                    <label><input type="radio" name="color" value="moletom-amarelo.jpg"> Amarelo</label>
+                    <label><input type="radio" name="color" value="moletom-branco.jpg"> Branco</label>
+                </div>
+                <div class="quantity-input"> <!-- Entrada de quantidade -->
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <button type="submit" id="finalizar-compra">Finalizar Compra</button><!-- Botão para finalizar a compra -->
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div id="footer_content"> <!-- Conteúdo do rodapé -->
+            <div id="footer_contacts"><!-- Informações de contato -->
+                <img src="/img/logo-branca.png" width="125px" usemap="#image-map"><!-- Imagem do logotipo -->
+                <map name="image-map"><!-- Mapeamento da imagem -->
+                    <area target="_self" alt="Logo do site, uma coroa preta e branca escrito Urban Mania" title="Logo" href="/index.html" coords="250,240,267" shape="circle">
+                </map>
+                <div id="footer_social_media"><!-- Links para redes sociais no rodapé -->
+                    <a href="#"class="footer-link" id="instagram">
+                        <i class="fa-brands fa-instagram"></i> <!-- Ícone do Instagram -->
+                    </a>
+                    <a href="#"class="footer-link" id="facebook">
+                        <i class="fa-brands fa-facebook"></i><!-- Ícone do Facebook -->
+                    </a>
+                    <a href="#"class="footer-link" id="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i><!-- Ícone do WhatsApp -->
+                    </a>
+                </div>
+            </div>
+        
+            <ul class="footer-list"><!-- Lista no rodapé -->
+                <li>
+                    <H3>Conheça a Urban</H3>
+                </li>
+                <li>
+                    <a href="/sobre-nos.html" class="footer-link">Sobre Nós</a>
+                </li>
+                <li>
+                    <a href="/contatos.html" class="footer-link">Contato</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list"><!-- Outra lista no rodapé -->
+                <li>
+                    <H3>Produtos</H3>
+                </li>
+                <li>
+                    <a href="/produtos.html" class="footer-link">Coleção</a>
+                </li>
+            </ul>
+            <div id ="footer-promotion">
+                <h3>Novidades</h3>
+                <p>Cadastre seu email para ser notificado de nossas futuras promoções</p>
+                <div id="input_group">
+                    <input type="email" id="email"><!-- Campo para inserção de email -->
+                    <button><i class="fa-regular fa-envelope"></i></button><!-- Botão para enviar o email -->
+                </div>
+            </div>
+        </div>
+        <div id="footer-copyright"><!-- Direitos autorais no rodapé -->
+            &#169<!-- Símbolo de copyright -->
+            2024 Urban Mania, Todos os direitos reservados.
+        </div>
+    </footer>
+</body>
+</html>
