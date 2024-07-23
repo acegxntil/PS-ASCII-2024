@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrega e Endereço</title>
+    <title>Camisa Social</title>
+    <link rel="stylesheet" href="/css/venda.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="./entrega.css">
 </head>
 <body>
     <div class="header">
@@ -13,63 +13,54 @@
             <img src="/img/logo-branca.png" width="150px" usemap="#image-map">
 
             <map name="image-map"><!-- Mapeamento da imagem -->
-                <area target="_self" alt="Logo do site, uma coroa preta e branca escrito Urban Mania" title="Logo" href="/index.html" coords="250,240,267" shape="circle">
+                <area target="_self" alt="Logo do site, uma coroa preta e branca escrito Urban Mania" title="Logo" href="/html/index.html" coords="250,240,267" shape="circle">
             </map>
         </div>
         <ul class="menu"><!-- Menu de navegação -->
             <div class ="options"><!-- Opções do menu -->
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/produtos.html">Produtos</a></li>
-                <li><a href="/sobre-nos.html">Sobre Nós</a></li>
-                <li><a href="/contatos.html">Contatos</a></li>
+                <li><a href="/html/index.html">Home</a></li>
+                <li><a href="/html/produtos.html">Produtos</a></li>
+                <li><a href="/html/sobre-nos.html">Sobre Nós</a></li>
+                <li><a href="/html/contatos.html">Contatos</a></li>
             </div>
         </ul>
     </div><!-- Fim da seção do cabeçalho -->
 
-    <!-- Formulário de informações de entrega -->
-    <div class="formulario">
-        <form id="form-compra" action="/index.html">
-            <label for="full-name">Nome Completo:</label><br>
-            <input type="text" id="full-name" name="full-name" required><br>
-
-            <!-- Layout em duas colunas para endereço -->
-            <div class="row">
-                <div class="col">
-                    <label for="estado">Estado:</label><br>
-                    <input type="text" id="estado" name="estado" required><br>
-                </div>
-                <div class="col">
-                    <label for="cidade">Cidade:</label><br>
-                    <input type="text" id="cidade" name="cidade" required><br>
-                </div>
+    <div class="product-container"><!-- Container do produto -->
+        <div class="product-image"><!-- Imagem do produto -->
+            <img src="/img/tshirt-black.jpg" alt="Camisa social preta e branca" id="product-image">
+        </div>
+        <div class="product-details"><!-- Detalhes do produto -->
+            <div class="product-title">Camisa Social</div>
+            <div class="product-price">R$ 49,99</div>
+            <div class="product-description">
+                <p>Camisa social feita de algodão. </p>
             </div>
-            
-            <div class="row">
-                <div class="col">
-                    <label for="rua">Rua:</label><br>
-                    <input type="text" id="rua" name="rua" required><br>
+            <form id="order-form" action="/html/entrega.html" method="GET"><!-- Formulário de pedido -->
+                <div class="size-buttons"><!-- Opções de tamanho -->
+                    <strong>Tamanho:</strong>
+                    <label><input type="radio" name="size" value="P"> P</label>
+                    <label><input type="radio" name="size" value="M"> M</label>
+                    <label><input type="radio" name="size" value="G"> G</label>
+                    <label><input type="radio" name="size" value="GG"> GG</label>
                 </div>
-                <div class="col">
-                    <label for="numero">Número:</label><br>
-                    <input type="number" id="numero" name="numero" required><br>
+                <div class="color-buttons"> <!-- Opções de cor -->
+                    <strong>Cor:</strong>
+                    <label><input type="radio" name="color" value="moletom-preto.jpg"> Preto</label>
+                    <label><input type="radio" name="color" value="moletom-azul.jpg"> Azul</label>
+                    <label><input type="radio" name="color" value="moletom-amarelo.jpg"> Amarelo</label>
+                    <label><input type="radio" name="color" value="moletom-branco.jpg"> Branco</label>
                 </div>
-            </div>
-            
-            <label for="complemento">Complemento:</label><br>
-            <input type="text" id="complemento" name="complemento"><br>
-            
-            <label for="cep">CEP:</label><br>
-            <input type="text" id="cep" name="cep" required><br>
-            
-            <label for="telefone">Telefone:</label><br>
-            <input type="tel" id="telefone" name="telefone" required><br>
-            
-            <!-- Botão de envio do formulário -->
-            <button type="submit" id="btn-finalizar">Finalizar Compra</button>
-        </form>
+                <div class="quantity-input"> <!-- Entrada de quantidade -->
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
+                </div>
+                <br><br><br>
+                <button type="submit" id="finalizar-compra">Finalizar Compra</button><!-- Botão de submissão do formulário -->
+            </form>
+        </div>
     </div>
-    
-    
+
     <footer>
         <div id="footer_content"> <!-- Conteúdo do rodapé -->
             <div id="footer_contacts"><!-- Informações de contato -->
@@ -95,10 +86,10 @@
                     <H3>Conheça a Urban</H3>
                 </li>
                 <li>
-                    <a href="/sobre-nos.html" class="footer-link">Sobre Nós</a>
+                    <a href="/html/sobre-nos.html" class="footer-link">Sobre Nós</a>
                 </li>
                 <li>
-                    <a href="/contatos.html" class="footer-link">Contato</a>
+                    <a href="/html/contatos.html" class="footer-link">Contato</a>
                 </li>
             </ul>
 
@@ -107,7 +98,7 @@
                     <H3>Produtos</H3>
                 </li>
                 <li>
-                    <a href="/produtos.html" class="footer-link">Coleção</a>
+                    <a href="/html/produtos.html" class="footer-link">Coleção</a>
                 </li>
             </ul>
             <div id ="footer-promotion">
